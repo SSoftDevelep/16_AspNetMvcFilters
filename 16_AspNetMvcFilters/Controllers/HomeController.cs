@@ -16,12 +16,17 @@ namespace _16_AspNetMvcFilters.Controllers
             return View();
         }
 
-       
+       [ExcFilter]
         public ActionResult Index2()
         {
+            object sayi = 0;
+            int deger = 100/(int)sayi;
+
+            //throw new Exception("Kullanici yetkisiz giris yapti");
             return View();
         }
 
+        [ExcFilter]
         public ActionResult Index3()
         {
             return View();

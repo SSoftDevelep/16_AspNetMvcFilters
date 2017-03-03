@@ -144,6 +144,7 @@
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Filters\ActFilter.cs" />
     <Compile Include="Filters\AuthFilter.cs" />
+    <Compile Include="Filters\ExcFilter.cs" />
     <Compile Include="Filters\ResFilter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -169,6 +170,7 @@
     <Content Include="Views\Home\Index2.cshtml" />
     <Content Include="Views\Home\Index3.cshtml" />
     <Content Include="Views\Login\SignIn.cshtml" />
+    <Content Include="Views\Login\Error.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

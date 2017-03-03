@@ -35,5 +35,15 @@ namespace _16_AspNetMvcFilters.Controllers
             }
             
         }
+
+        public ActionResult Error()
+        {
+            if (TempData["error"]==null)
+            
+                return RedirectToAction("Index", "Home");
+            
+            Exception model = TempData["error"] as Exception;
+            return View(model);
+        }
     }
 }
