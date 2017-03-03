@@ -13,10 +13,10 @@ namespace _16_AspNetMvcFilters.Filters
         //action calistiktan sonra
         public void OnActionExecuted(ActionExecutedContext filterContext)
         {
-            
+
             db.Logs.Add(new Log
             {
-                KullaniciAdi = "system",
+                KullaniciAdi = (filterContext.HttpContext.Session["login"] as SiteUser).KullaniciAdi,
                 ActionName = filterContext.ActionDescriptor.ActionName,
                 ControllerName = filterContext.ActionDescriptor.ControllerDescriptor.ControllerName,
                 Tarih = DateTime.Now,
@@ -31,7 +31,7 @@ namespace _16_AspNetMvcFilters.Filters
         {
             db.Logs.Add(new Log
             {
-                KullaniciAdi = "system",
+                KullaniciAdi = (filterContext.HttpContext.Session["login"] as SiteUser).KullaniciAdi,
                 ActionName = filterContext.ActionDescriptor.ActionName,
                 ControllerName = filterContext.ActionDescriptor.ControllerDescriptor.ControllerName,
                 Tarih = DateTime.Now,

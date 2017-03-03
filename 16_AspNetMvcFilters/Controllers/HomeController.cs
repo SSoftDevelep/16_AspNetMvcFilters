@@ -7,21 +7,21 @@ using System.Web.Mvc;
 
 namespace _16_AspNetMvcFilters.Controllers
 {
+    [ActFilter, ResFilter, AuthFilter]
     public class HomeController : Controller
     {
-       [ActFilter,ResFilter]
+      
         public ActionResult Index()
         {
             return View();
         }
 
-        [ActFilter,ResFilter]
+       
         public ActionResult Index2()
         {
             return View();
         }
 
-        [ActFilter, ResFilter]
         public ActionResult Index3()
         {
             return View();

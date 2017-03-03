@@ -15,7 +15,7 @@ namespace _16_AspNetMvcFilters.Filters
         {
             db.Logs.Add(new Log
             {
-                KullaniciAdi = "system",
+                KullaniciAdi = (filterContext.HttpContext.Session["login"] as SiteUser).KullaniciAdi,
                 ActionName = filterContext.RouteData.Values["action"].ToString(),
                 ControllerName = filterContext.RouteData.Values["controller"].ToString(),
 
@@ -30,7 +30,7 @@ namespace _16_AspNetMvcFilters.Filters
         {
             db.Logs.Add(new Log
             {
-                KullaniciAdi = "system",
+                KullaniciAdi = (filterContext.HttpContext.Session["login"] as SiteUser).KullaniciAdi,
                 ActionName = filterContext.RouteData.Values["action"].ToString(),
                 ControllerName = filterContext.RouteData.Values["controller"].ToString(),
                 Tarih = DateTime.Now,
