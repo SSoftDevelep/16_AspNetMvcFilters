@@ -9,19 +9,19 @@ namespace _16_AspNetMvcFilters.Controllers
 {
     public class HomeController : Controller
     {
-       [ActFilter]
+       [ActFilter,ResFilter]
         public ActionResult Index()
         {
             return View();
         }
 
-        [ActFilter]
+        [ActFilter,ResFilter]
         public ActionResult Index2()
         {
             return View();
         }
 
-        [ActFilter]
+        [ActFilter, ResFilter]
         public ActionResult Index3()
         {
             return View();
